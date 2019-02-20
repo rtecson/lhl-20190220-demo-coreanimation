@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Create a CALayer, size 150x150, position 50,50, bgColor is blue
+        // Create a CALayer, size 150x150, position 200,200, bgColor is blue
         let layerOne = CALayer()
-        layerOne.frame = CGRect(x: 50, y: 50, width: 150, height: 150)
+        layerOne.frame = CGRect(x: 200, y: 200, width: 150, height: 150)
         layerOne.backgroundColor = UIColor.blue.cgColor
 
         // Add as a sublayer to our view's layer
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 //        opacityAnim.delegate = self
         opacityAnim.repeatCount = 3
         opacityAnim.autoreverses = true
-//        opacityAnim.speed = 100
+//        opacityAnim.speed = 10
         layerOne.add(opacityAnim, forKey: "opacityAnim")
 
 //        // Animate background color
@@ -44,8 +44,8 @@ class ViewController: UIViewController {
 
 //        // Animate y position
 //        let moveAnim = CABasicAnimation(keyPath: "position.y")
-//        moveAnim.fromValue = 100
-//        moveAnim.toValue = 300
+//        moveAnim.fromValue = 275
+//        moveAnim.toValue = 400
 //        moveAnim.duration = 1.5
 //        moveAnim.repeatCount = HUGE
 //        moveAnim.autoreverses = true
@@ -62,10 +62,10 @@ class ViewController: UIViewController {
 
 //        // Create another CALayer sublayer
 //        let layerTwo = CALayer()
-//        layerTwo.frame = CGRect(x: 200, y: 20, width: 150, height: 150)
+//        layerTwo.frame = CGRect(x: 20, y: 200, width: 150, height: 150)
 //        layerTwo.backgroundColor = UIColor.red.cgColor
 //        view.layer.addSublayer(layerTwo)
-
+//
 //        // Group the following animations into one CA transaction (everything betweeen begin() and commit()
 //        // Call completion block when all the animations have completed
 //        // Animations may be of different lengths, completed only when the longest one is finished
@@ -78,19 +78,19 @@ class ViewController: UIViewController {
 //
 //        // Show use of keyframe animation (define intermediate values and times (between 0 and 1) for each value)
 //        let moveKeysAnim = CAKeyframeAnimation(keyPath: "position")
-//        moveKeysAnim.values = [CGPoint(x: 200, y: 20),
+//        moveKeysAnim.values = [CGPoint(x: 95, y: 275),
 //                               CGPoint(x: 250, y: 100),
 //                               CGPoint(x:150, y: 300),
 //                               CGPoint(x: 300, y: 200)]
-////        moveKeysAnim.keyTimes = [0, 0.1, 0.75, 1]
-//        moveKeysAnim.duration = 3
+//        moveKeysAnim.duration = 2
 //        moveKeysAnim.autoreverses = true
 //        moveKeysAnim.repeatCount = 1
-////        moveKeysAnim.calculationMode = kCAAnimationDiscrete
-//        moveKeysAnim.keyTimes = [0, 0.1, 0.5, 0.8, 1]  // These key times are for discrete animation, one more key time than values
-////        moveKeysAnim.calculationMode = kCAAnimationPaced  // Key times are ignored here
-////        moveKeysAnim.calculationMode = kCAAnimationCubic
-//        moveKeysAnim.calculationMode = CAAnimationCalculationMode.cubicPaced  // Key times are ignored here
+////        moveKeysAnim.calculationMode = .paced  // Key times are ignored here
+////        moveKeysAnim.calculationMode = .discrete
+////        moveKeysAnim.keyTimes = [0, 0.1, 0.5, 0.8, 1]  // These key times are for discrete animation, one more key time than values
+////        moveKeysAnim.keyTimes = [0, 0.1, 0.75, 1]
+////        moveKeysAnim.calculationMode = .cubic
+////        moveKeysAnim.calculationMode = .cubicPaced  // Key times are ignored here
 //        layerTwo.add(moveKeysAnim, forKey: nil)
 //
 //        let colorKeysAnim = CAKeyframeAnimation(keyPath: "backgroundColor")
@@ -103,12 +103,12 @@ class ViewController: UIViewController {
 //        layerTwo.add(colorKeysAnim, forKey: nil)
 //
 //        CATransaction.commit()
-
+//
 //        let layerThree  = CALayer()
 //        layerThree.backgroundColor = UIColor.green.cgColor
 //        layerThree.frame = CGRect(x: 100, y: 100, width: 100, height: 150)
 //        view.layer.addSublayer(layerThree)
-//
+
 //        let path = UIBezierPath(arcCenter: view.center,
 //                                radius: 150,
 //                                startAngle: 0,
@@ -118,7 +118,7 @@ class ViewController: UIViewController {
 //        pathMoveAnim.path = path
 //        pathMoveAnim.duration = 4
 //        pathMoveAnim.repeatCount = HUGE
-//        pathMoveAnim.rotationMode = CAAnimationRotationMode.rotateAuto
+//        pathMoveAnim.rotationMode = .rotateAuto
 //        layerThree.add(pathMoveAnim, forKey: nil)
     }
 }
