@@ -1,0 +1,15 @@
+## Core Animation
+
+Today we talked about Core Animation and `CALayer`s. Core Animation is the underlying framework for animation in iOS and macOS. In most cases you should use `UIView` animations, but it is important to know what the underlying technology is. `CALayer`s back `UIView`s in iOS.
+
+The two main types of animations we looked at are `CABasicAnimation`s and `CAKeyframeAnimation`s. `CABasicAnimation`s have a `fromValue` and `toValue` that the layer interpolates between. `CAKeyframeAnimation`s can have an array of values or a path that are interpolated along. We can control how the points/values are interpolated along by providing a timing function or an array of `keyTimes`.
+
+There's an informal delegate we can use on animation to receive callbacks when animations start or stop. There's also a block-based approach with `CATransaction`, where we can set a block that will run when the animations in the transaction are completed.
+
+### Resources
+
+Code: https://github.com/rtecson/lhl-20190220-demo-coreanimation.git
+<br />
+
+Slides: https://docs.google.com/presentation/d/1RosdctosllaTf4RS2wb-fJ8DSMkjioubGZ3eq6j6FjI/edit?usp=sharing
+<br />
