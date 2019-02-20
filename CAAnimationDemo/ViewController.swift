@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Create a CALayer, size 150x150, position 10,10, bgColor is blue
+        // Create a CALayer, size 150x150, position 50,50, bgColor is blue
         let layerOne = CALayer()
-        layerOne.frame = CGRect(x: 10, y: 10, width: 150, height: 150)
+        layerOne.frame = CGRect(x: 50, y: 50, width: 150, height: 150)
         layerOne.backgroundColor = UIColor.blue.cgColor
 
         // Add as a sublayer to our view's layer
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         opacityAnim.fromValue = 1
         opacityAnim.toValue = 0
         opacityAnim.duration = 2
-        opacityAnim.delegate = self
+//        opacityAnim.delegate = self
         opacityAnim.repeatCount = 3
         opacityAnim.autoreverses = true
 //        opacityAnim.speed = 100
